@@ -126,3 +126,37 @@ infos()
 menu()
 '''
 
+
+compra = {
+}
+
+def user():
+    user_owner = input('Digite se você é comprador ou vendedor:')
+    if user_owner == 'comprador':
+        print(f'Digite quais peixes você quer comprar: {peixes["Espécies"]}')
+        compra_peixes()
+    elif user_owner == 'vendedor':
+            menu()
+
+compra['peixes'] = []
+compra['valor'] = []
+compra['endereço'] = []
+
+def compra_peixes():
+    comprar_peixe = input("Digite o peixe que você deseja comprar")
+    for num in compra.keys():
+        if num == comprar_peixe:
+            compra['valor'] += 1
+        else:
+            compra['valor'] = 0
+    comprar_peixe.append(compra[peixes])
+    comprar_peixe += 1
+    return
+compra_peixe()
+
+def endereco():
+    end = input("Digite seu endereço: ")
+    end.append(compra['endereço'])
+    return
+endereco()
+
